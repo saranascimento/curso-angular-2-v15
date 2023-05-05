@@ -11,11 +11,12 @@ export class DiretivasEstruturaisComponent implements OnInit {
   public conditionClick: boolean = true
 
   public list: Array<{nome: string, idade: number}> = [
-    {nome: 'Sara Gomes', idade: 29},
+    {nome: 'Sara', idade: 29},
     {nome: 'José', idade: 59},
     {nome: 'Maria', idade: 55},
   ]
-
+  
+  public nome: string = 'sara'
   constructor() {}
   ngOnInit(): void {
 
