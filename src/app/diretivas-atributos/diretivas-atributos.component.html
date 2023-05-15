@@ -1,4 +1,4 @@
-<div *ngIf="nome != 'Sara'">
+<!-- <div *ngIf="nome != 'Sara'">
     <h2>Ng Class</h2>
     <p [ngClass]="'active'">Ng Class</p>
     <p [ngClass]="{'active': true, 'disabled': false}">Ng Class</p>
@@ -18,4 +18,17 @@
 
 <button (click)="salvar()">Salvar</button>
 
-<li *ngFor="let item of list">{{item.nome}}</li>
+<li *ngFor="let item of list">{{item.nome}}</li> -->
+
+<h2>Ng template</h2>
+
+<ng-template [ngIf]="true">
+    <p>true</p>
+</ng-template>
+
+<ng-template ngFor let-item [ngForOf]="list">
+    <p>{{item.nome}}</p>
+</ng-template>
+
+<input [(ngModel)]="nome"> {{nome}}
+<button (click)="salvar()">Salvar</button>
