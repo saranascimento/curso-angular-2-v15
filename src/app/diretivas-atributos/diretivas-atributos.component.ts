@@ -11,6 +11,9 @@ export class DiretivasAtributosComponent implements OnInit {
   public heightPx: string = "20px";
   public backgroundColor: string = "red";
 
+  public nome: string = "";
+  public list: Array<{nome: string}> = [];
+
   constructor() {}
   ngOnInit(): void {
     setInterval(() => {
@@ -24,5 +27,10 @@ export class DiretivasAtributosComponent implements OnInit {
         this.backgroundColor = "red";
       }
     }, 2000)
+  }
+
+  public salvar(){
+    this.list.push({nome: this.nome});
+    this.nome = "";
   }
 }

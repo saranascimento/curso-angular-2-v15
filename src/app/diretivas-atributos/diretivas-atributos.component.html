@@ -1,9 +1,21 @@
-<h2>Ng Class</h2>
-<p [ngClass]="'active'">Ng Class</p>
-<p [ngClass]="{'active': true, 'disabled': false}">Ng Class</p>
-<p [ngClass]="{'active': valor, 'disabled': !valor}">Ng Class</p>
+<div *ngIf="nome != 'Sara'">
+    <h2>Ng Class</h2>
+    <p [ngClass]="'active'">Ng Class</p>
+    <p [ngClass]="{'active': true, 'disabled': false}">Ng Class</p>
+    <p [ngClass]="{'active': valor, 'disabled': !valor}">Ng Class</p>
+
+    <hr>
+
+    <h2>Ng Style</h2>
+    <p [ngStyle]="{'height': heightPx, 'background-color': backgroundColor }">Ng Style</p>
+</div>
 
 <hr>
 
-<h2>Ng Style</h2>
-<p [ngStyle]="{'height': heightPx, 'background-color': backgroundColor }">Ng Style</p>
+<h2>Ng Model</h2>
+
+<input [(ngModel)]="nome"> {{nome}}
+
+<button (click)="salvar()">Salvar</button>
+
+<li *ngFor="let item of list">{{item.nome}}</li>
