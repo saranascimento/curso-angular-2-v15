@@ -1,4 +1,4 @@
-<ng-content select="h1"></ng-content>
+<!-- <ng-content select="h1"></ng-content>
 
  <div *ngIf="nome != 'Sara'">
     <h2>Ng Class</h2>
@@ -41,4 +41,15 @@
 
 <h2>Ng content</h2>
 
-<ng-content select="h3"></ng-content>
+<ng-content select="h3"></ng-content> -->
+
+<hr>
+
+<h2>Pipes</h2>
+
+<input [(ngModel)]="nome"> {{nome}}
+<button (click)="salvar()">Salvar</button> 
+
+<li *ngFor="let item of list ">{{item.nome | uppercase}}</li> 
+
+{{date | date: 'dd/MM/yyyy'}}
