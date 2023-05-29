@@ -2,12 +2,7 @@ import {  Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-  <ng-template [ngIf]="getDados">
-    <h1>{{getDados.nome}}</h1>
-    <h1>{{getDados.idade}}</h1>
-  </ng-template>
-
-  <app-output (enviarDados)="setDados($event)"></app-output>
+  <app-food-list></app-food-list>
   
   <router-outlet></router-outlet>
   `
